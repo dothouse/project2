@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <div class=" container p-3 text-bg-dark">
+        <h1>뉴스기사 요약</h1>
+    </div>
+</head>
+
+<body>
+<div class=" container">
+
+    <h2> 뉴스 기사를 입력하세요.</h2>
+
+    <form action='../result/text' method="post"
+          class='dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px'>
+        <textarea name="origin_text" cols="50" rows="15" id="myTextarea"></textarea>
+
+        <!--        <div class="list-group">-->
+        <!--            <h4> 요약 길이 선택</h4>-->
+        <!--            <select name="sentence" id="sentence" class="btn btn-secondary btn-lg">-->
+        <!--                <option value="sentenceType1">1줄 요약</option>-->
+        <!--                <option value="sentenceType3">3줄 요약</option>-->
+        <!--            </select>-->
+        <!--        </div>-->
+
+        <input type='submit' class="btn btn-warning" value="요약하기"/>
+
+
+    </form>
+
+</div>
+<div class="container">
+    <button id="clearButton" onclick="clearTextarea(); clearUrlarea()">내용 지우기</button>
+</div>
+
+<div class=" container">
+
+    <h2> 네이버 뉴스 URL을 입력하세요. <strong></strong></h2>
+
+    <form action='../result/url' method="post"
+          class='dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px'
+          data-bs-theme="light" onsubmit="return chkSum();">
+        <textarea name="news_url" cols="50" rows="1" id="myUrlarea"></textarea>
+        <input type='submit' class="btn btn-warning" value="요약하기"/>
+
+
+    </form>
+
+</body>
+<script>
+    function clearTextarea() {
+        document.getElementById("myTextarea").value = "";
+    }
+    function clearUrlarea() {
+        document.getElementById("myUrlarea").value = "";
+    }
+
+</script>
+{% endblock %}

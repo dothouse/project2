@@ -1,0 +1,65 @@
+<!-- 전체 html에 적용하는 것들 모아두기-->
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+<!--    &lt;!&ndash; 글씨체 &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">-->
+
+
+    <style>
+        @font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://ssl.pstatic.net/static/sports/fonts/NanumSquareNeoVariable.woff2) format("woff");
+}
+
+        body {
+
+        }
+        h1 {
+
+              text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+        div {padding: 20px ;}
+
+        table{ border-collapse : collapse; }  /*이중선 제거*/
+        th,td{
+          text-align: center;
+          border: 1px solid #000;
+
+          vertical-align: top;	/* 위 */
+          vertical-align: bottom;   /* 아래 */
+          vertical-align: middle;   /* 가운데 */
+        }
+    </style>
+
+    <title>문서요약</title>
+</head>
+<body>
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+<!-- Bootstrap JS -->
+
+
+<!-- 자바스크립트 Start -->
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+{% endblock %}
+<!-- 자바스크립트 End -->
+</body>
+</html>

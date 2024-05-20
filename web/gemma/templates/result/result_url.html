@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <div class=" container p-3 text-bg-dark">
+        <h1>뉴스기사 요약 / 결과페이지</h1>
+        <!--        <h2>{{sentence_len}}</h2>-->
+    </div>
+</head>
+
+<body>
+<div class="container">
+    <input type="button" class="btn" value="뒤로가기" onclick="history.back();"
+           style="background-color: #7FFF00; float: center;"/>
+</div>
+
+<div class="container">
+    <div>
+        <h3>원본</h3>
+        <p>{{ news_text }}</p>
+    </div>
+    <div>
+        <h3>요약본</h3>
+        <p>
+            {{ result_text }}
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+
+
+{% endblock %}
